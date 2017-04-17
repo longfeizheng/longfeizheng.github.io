@@ -11,10 +11,14 @@
   url: http://www.merryyou.cn/
 
 - sitename: 微博
-  name: dandandeshangni
+  name: 淡淡的伤你
   url: http://weibo.com/2240567614/profile?rightmod=1&wvr=6&mod=personinfo
 
 - sitename: QQ
   name: 50%
   url: tencent://message/?uin=837691512&Site=121ask.com&Meu=yes
+  
+  sitename: 微信
+  name: dandandeshangni
+  url: 
 
