@@ -16,3 +16,4 @@ keywords: Oracle,MyBatis
             '0', #{item.swap_date}, sysdate)
         </foreach>
         ;END ;
+	</insert>
