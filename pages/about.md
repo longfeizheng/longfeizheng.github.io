@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 谦和之中见卓越
+keywords: longfeizheng
 comments: true
 menu: 关于
 permalink: /about/
