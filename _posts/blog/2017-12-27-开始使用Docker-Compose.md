@@ -5,7 +5,7 @@ categories: Docker
 description: Docker
 keywords: Docker
 ---
-> 接下来，我们将构建一个运行在`Docker`上的简单的`Python Web`应用程序。
+> 我们将构建一个运行在`Docker`上的简单的`Python Web`应用程序。
 应用程序使用`Flask` 框架，并在redis中维护一个计数器。
 虽然示例使用python，即使你不熟悉它也没关系。 
 
