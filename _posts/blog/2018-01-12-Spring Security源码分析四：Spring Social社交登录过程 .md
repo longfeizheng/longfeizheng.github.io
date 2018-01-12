@@ -11,7 +11,7 @@ keywords: Spring Security
 在上一章[Spring-Security源码分析三-Spring-Social社交登录过程](https://longfeizheng.github.io/2018/01/09/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B/)中，我们已经实现了使用`Spring Social`+`Security`的QQ社交登录。本章我们将实现微信的社交登录。（微信和QQ登录的大体流程相同，但存在一些细节上的差异，下面我们来简单实现一下）
 
 
-###准备工作
+### 准备工作
 1. 熟悉[OAuth2.0协议标准](https://oauth.net/2/)，微信登录是基于[OAuth2.0中的authorization_code模式](https://tools.ietf.org/html/rfc6749#section-4.1)的授权登录；
 2. [微信开放平台](https://open.weixin.qq.com/cgi-bin/frame?t=home/web_tmpl&lang=zh_CN)申请网站应用开发，获取`appid`和`appsecret`
 3. 熟读[网站应用微信登录开发指南](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316505&token=6505faac65c26a79bc1b0218aa8cd24c0e24bceb&lang=zh_CN)
