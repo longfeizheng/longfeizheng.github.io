@@ -33,7 +33,7 @@ keywords: Spring Security
 3. `connect`与服务提供商建立连接所需的一些类。
 
 
-##### 定义返回用户信息接口
+#### 定义返回用户信息接口
 ```java
 public interface Weixin {
     WeixinUserInfo getUserInfo(String openId);
@@ -42,7 +42,7 @@ public interface Weixin {
 
 这里我们看到相对于QQ的`getUserInfo`微信多了一个参数`openId`。这是因为[微信文档](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316505&token=6505faac65c26a79bc1b0218aa8cd24c0e24bceb&lang=zh_CN)中在[OAuth2.0的认证流程示意图](https://longfeizheng.github.io/2018/01/09/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B/#oauth20%E7%9A%84%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B%E7%A4%BA%E6%84%8F%E5%9B%BE)第五步时，微信的`openid` 同`access_token`一起返回。而`Spring Social`获取`access_token`的类`AccessGrant.java`中没有`openid`。因此我们自己需要扩展一下`Spring Social`获取令牌的类（`AccessGrant.java`）；
 
-##### 处理微信返回的access_token类(添加openid)
+#### 处理微信返回的access_token类(添加openid)
 ```java
 @Data
 public class WeixinAccessGrant extends AccessGrant{
