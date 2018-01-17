@@ -26,7 +26,7 @@ OAuth2是一种授权协议，简单理解就是它可以让用户在不将用�
 如果在`SecurityContext`中放入一个已经认证过的`Authentication`实例，那么对于`Spring Security`来说，已经成功登录
 
 
-`Spring Social`就是为我们将`OAuth2`认证流程封装到`SocialAuthenticationFilter`过滤器中，并根据返回的用户信息构建`Authentication`。前面我们已经提到`Spring Security`的[验证逻辑](https://longfeizheng.github.io/2018/01/02/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%80-Spring-Security%E8%AE%A4%E8%AF%81%E8%BF%87%E7%A8%8B/#%E9%AA%8C%E8%AF%81%E9%80%BB%E8%BE%91)从而实现使用社交登录。
+`Spring Social`就是为我们将`OAuth2`认证流程封装到`SocialAuthenticationFilter`过滤器中，并根据返回的用户信息构建`Authentication`。然后使用`Spring Security`的[验证逻辑](https://longfeizheng.github.io/2018/01/02/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%80-Spring-Security%E8%AE%A4%E8%AF%81%E8%BF%87%E7%A8%8B/#%E9%AA%8C%E8%AF%81%E9%80%BB%E8%BE%91)从而实现使用社交登录。
 
 启动[logback](https://github.com/longfeizheng/logback)断点调试；
 
@@ -79,11 +79,13 @@ public Authentication attemptAuthentication(HttpServletRequest request, HttpServ
 		if (token == null) return null;
 		
 		Assert.notNull(token.getConnection());
-		//#7.从SecurityContext获取Authentication判断是否授权
+		//#7.从SecurityContext获取Authentication判断是否认证
 		Authentication auth = getAuthentication();
 		if (auth == null || !auth.isAuthenticated()) {
+			//#8.进行认证
 			return doAuthentication(authService, request, token);
 		} else {
+			//#9.返回当前的登录账户的一些信息
 			addConnection(authService, request, token, auth);
 			return null;
 		}		
@@ -98,7 +100,7 @@ public Authentication attemptAuthentication(HttpServletRequest request, HttpServ
 5. 获取处理社交的`OAuth2AuthenticationService`（用于获取`SocialAuthenticationToken`）
 6. 从`SecurityContext`获取`Authentication`判断是否授权
 
-#### OAuth2AuthenticationService
+#### OAuth2AuthenticationService#getAuthToken
 
 ```java
 public SocialAuthenticationToken getAuthToken(HttpServletRequest request, HttpServletResponse response) throws SocialAuthenticationRedirectException {
@@ -139,4 +141,98 @@ public SocialAuthenticationToken getAuthToken(HttpServletRequest request, HttpSe
 4. 如果存在则根据`code`获取`access_token`
 5. 根据`access_token`返回用户信息（该信息为`Spring Social`标准信息模型）
 6. 使用用户返回的信息构建`SocialAuthenticationToken`
+
+#### SocialAuthenticationFilter#doAuthentication
+```java
+private Authentication doAuthentication(SocialAuthenticationService<?> authService, HttpServletRequest request, SocialAuthenticationToken token) {
+		try {
+			if (!authService.getConnectionCardinality().isAuthenticatePossible()) return null;
+			token.setDetails(authenticationDetailsSource.buildDetails(request));
+			//#重点熟悉的AuhenticationManage
+			Authentication success = getAuthenticationManager().authenticate(token);
+			Assert.isInstanceOf(SocialUserDetails.class, success.getPrincipal(), "unexpected principle type");
+			updateConnections(authService, token, success);			
+			return success;
+		} catch (BadCredentialsException e) {
+			// connection unknown, register new user?
+			if (signupUrl != null) {
+				// store ConnectionData in session and redirect to register page
+				sessionStrategy.setAttribute(new ServletWebRequest(request), ProviderSignInAttempt.SESSION_ATTRIBUTE, new ProviderSignInAttempt(token.getConnection()));
+				throw new SocialAuthenticationRedirectException(buildSignupUrl(request));
+			}
+			throw e;
+		}
+	}
+```
+
+#### SocialAuthenticationProvider#authenticate
+```java
+public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+		//#1.一些判断信息
+		Assert.isInstanceOf(SocialAuthenticationToken.class, authentication, "unsupported authentication type");
+		Assert.isTrue(!authentication.isAuthenticated(), "already authenticated");
+		SocialAuthenticationToken authToken = (SocialAuthenticationToken) authentication;
+		//#2.从SocialAuthenticationToken中获取providerId（表示当前是那个第三方登录）
+		String providerId = authToken.getProviderId();
+		//#3.从SocialAuthenticationToken中获取获取用户信息 即ApiAdapter设置的用户信息
+		Connection<?> connection = authToken.getConnection();
+		//#4.从UserConnection表中查询数据
+		String userId = toUserId(connection);
+		//#5.如果不存在抛出BadCredentialsException异常
+		if (userId == null) {
+			throw new BadCredentialsException("Unknown access token");
+		}
+		//#6.调用我们自定义的MyUserDetailsService查询
+		UserDetails userDetails = userDetailsService.loadUserByUserId(userId);
+		if (userDetails == null) {
+			throw new UsernameNotFoundException("Unknown connected account id");
+		}
+		//#7.返回已经认证的SocialAuthenticationToken
+		return new SocialAuthenticationToken(connection, userDetails, authToken.getProviderAccountData(), getAuthorities(providerId, userDetails));
+	}
+```
+1. 从SocialAuthenticationToken中获取providerId（表示当前是那个第三方登录）
+2. 从SocialAuthenticationToken中获取获取用户信息 即ApiAdapter设置的用户信息
+3. 从UserConnection表中查询数据
+4. 调用我们自定义的MyUserDetailsService查询
+5. 都正常之后返回已经认证的SocialAuthenticationToken
+UserConnection表中是如何添加添加数据的？
+
+#### JdbcUsersConnectionRepository#findUserIdsWithConnection
+```java
+public List<String> findUserIdsWithConnection(Connection<?> connection) {
+		ConnectionKey key = connection.getKey();
+		List<String> localUserIds = jdbcTemplate.queryForList("select userId from " + tablePrefix + "UserConnection where providerId = ? and providerUserId = ?", String.class, key.getProviderId(), key.getProviderUserId());		
+		//# 重点conncetionSignUp
+		if (localUserIds.size() == 0 && connectionSignUp != null) {
+			String newUserId = connectionSignUp.execute(connection);
+			if (newUserId != null)
+			{
+				createConnectionRepository(newUserId).addConnection(connection);
+				return Arrays.asList(newUserId);
+			}
+		}
+		return localUserIds;
+	}
+```
+因此我们自定义`MyConnectionSignUp`实现`ConnectionSignUp`接口后，`Spring Social`会插入数据后返回`userId`
+
+```java
+@Component
+public class MyConnectionSignUp implements ConnectionSignUp {
+    @Override
+    public String execute(Connection<?> connection) {
+        //根据社交用户信息，默认创建用户并返回用户唯一标识
+        return connection.getDisplayName();
+    }
+}
+```
+### 时序图
+[![http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Sequence%20Diagram0.png](http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Sequence%20Diagram0.png "http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Sequence%20Diagram0.png")](http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Sequence%20Diagram0.png "http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Sequence%20Diagram0.png")
+
+至于`OAuth2AuthenticationService`中获取`code`和`AccessToken`,`Spring Social`已经我们提供了基本的实现。开发中，根据不通的服务提供商提供不通的实现，具体可参考以下类图，代码可参考[logback](https://github.com/longfeizheng/logback)项目`social`包下面的类。
+[![http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Class%20Diagram0.png](http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Class%20Diagram0.png "http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Class%20Diagram0.png")](http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Class%20Diagram0.png "http://dandandeshangni.oss-cn-beijing.aliyuncs.com/github/Spring%20Security/Spring-Social-Class%20Diagram0.png")
+
+## 总结 ##
+以上便是使用`Spring Social`实现社交登录的核心类，其实和用户名密码登录，短信登录原理一样.都有`Authentication`，和实现认证的`AuthenticationProvider`。
 
