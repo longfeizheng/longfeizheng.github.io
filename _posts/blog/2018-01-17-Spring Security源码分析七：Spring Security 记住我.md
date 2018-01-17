@@ -22,9 +22,7 @@ create table persistent_logins (username varchar(64) not null, series varchar(64
 ```
 2. 登陆页面添加记住我复选款（name必须是remeber-me）
 ```html
- <div class="left check_left">
-                            <label><input name="remember-me" type="checkbox"> 下次自动登录</label>
-                        </div>
+<input name="remember-me" type="checkbox"> 下次自动登录
 ```
 3. 配置[MerryyouSecurityConfig](https://github.com/longfeizheng/logback/blob/master/src/main/java/cn/merryyou/logback/security/MerryyouSecurityConfig.java#L72)
 ```java
