@@ -109,6 +109,7 @@ public void logout(HttpServletRequest request, HttpServletResponse response,
 ```
 
 1. 清空persistent_logins表中记录
+
 #### SecurityContextLogoutHandler#logout
 ````java
 public void logout(HttpServletRequest request, HttpServletResponse response,
@@ -135,6 +136,7 @@ public void logout(HttpServletRequest request, HttpServletResponse response,
 
 1. 使当前session失效
 2. 清空当前的`SecurityContext`
+
 #### AbstractAuthenticationTargetUrlRequestHandler#handle
 ```java
 	protected void handle(HttpServletRequest request, HttpServletResponse response,
