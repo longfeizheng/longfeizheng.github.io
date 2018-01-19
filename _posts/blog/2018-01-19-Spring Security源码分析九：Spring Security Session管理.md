@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Security源码分析八：Spring Security 退出
+title: Spring Security源码分析九：Spring Security Session管理.md
 categories: Spring Security
 description: Spring Security
 keywords: Spring Security
@@ -73,7 +73,10 @@ public class MerryyounExpiredSessionStrategy implements SessionInformationExpire
 
 ### 集群环境Session处理
 
+
 1. 添加spring-session-data-redis依赖
+
+
 ```xml
 <dependency>
 			<groupId>org.springframework.session</groupId>
@@ -81,7 +84,10 @@ public class MerryyounExpiredSessionStrategy implements SessionInformationExpire
 			<version>1.3.1.RELEASE</version>
 		</dependency>
 ```
+
 2. 配置Spring-session存储策略
+
+
 ```xml
 spring:
   redis:
@@ -90,7 +96,10 @@ spring:
   session:
     store-type: redis
 ```
+
 3. 测试`8080`和`8081`端口分别启动项目
+
+
 ```xml
 java -jar spring-security.jar --server.port=8080
 java -jar spring-security.jar --server.port=8081
