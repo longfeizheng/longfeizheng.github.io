@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Security源码分析九：Spring Security Session管理.md
+title: Spring Security源码分析九：Spring Security Session管理
 categories: Spring Security
 description: Spring Security
 keywords: Spring Security
