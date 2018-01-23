@@ -114,7 +114,7 @@ public class MerryyouJwtTokenEnhancer implements TokenEnhancer {
     @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
         Map<String, Object> info = new HashMap<>();
-        info.put("blog", "https://longfeizheng.github.io/");
+        info.put("blog", "https://longfeizheng.github.io/");//扩展返回的token
         ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(info);
         return accessToken;
     }
@@ -247,7 +247,7 @@ public class MerryyouResourceServerConfig extends ResourceServerConfigurerAdapte
 
 效果如下：
 
-[![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif.gif](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif.gif")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif.gif")
+[![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/security/spring-security-jwt03.gif")
 
 ## 代码下载 ##
 从我的 github 中下载，[https://github.com/longfeizheng/security-oauth2](https://github.com/longfeizheng/security-oauth2)
