@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Security源码分析十三：Spring Security 基于表达式的访问控制
+title: Spring Security源码分析十三：Spring Security 基于表达式的权限控制
 categories: Spring Security
 description: Spring Security
 keywords: Spring Security
@@ -9,7 +9,7 @@ keywords: Spring Security
 
 ## 前言
 
-spring security 3.0已经可以使用spring el表达式来控制授权，允许在表达式中使用复杂的布尔逻辑来控制访问的权限。
+`spring security 3.0`已经可以使用`spring el`表达式来控制授权，允许在表达式中使用复杂的布尔逻辑来控制访问的权限。
 
 ### 常见的表达式
 
