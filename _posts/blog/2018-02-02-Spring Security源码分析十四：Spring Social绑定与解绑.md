@@ -8,7 +8,7 @@ keywords: Spring Security
 > 社交登录又称作社会化登录（Social Login），是指网站的用户可以使用腾讯QQ、人人网、开心网、新浪微博、搜狐微博、腾讯微博、淘宝、豆瓣、MSN、Google等社会化媒体账号登录该网站。
 
 ## 前言
-在之前的`Spring Social`系列中，我们只是实现了使用服务提供商账户登录到业务系统中，但没有与我们业务系统中的账号进行绑定和解绑。本章我们承接之前的社交系列来实现社交账户与业务系统账户的绑定与解绑。
+在之前的`Spring Social`系列中，我们只是实现了使用服务提供商账号登录到业务系统中，但没有与业务系统中的账号进行关联。本章承接之前社交系列来实现社交账号与业务系统账号的绑定与解绑。
 
 1. [Spring-Security源码分析三-Spring-Social社交登录过程](https://longfeizheng.github.io/2018/01/09/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%89-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B/)
 2. [Spring-Security源码分析四-Spring-Social社交登录过程](https://longfeizheng.github.io/2018/01/12/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%9B%9B-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B/)
@@ -32,10 +32,10 @@ create unique index UserConnectionRank on UserConnection(userId, providerId, ran
 3. `providerUserId` 服务提供商返回的唯一标识（`openid`）
 
 
-####  社交登录注册实现
+###  社交登录注册实现
 ####  取消MyConnectionSignUp
-在[Spring-Security源码分析六-Spring-Social社交登录源码解析](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#jdbcusersconnectionrepositoryfinduseridswithconnection)中，我们得知，当配置`ConnectionSignUp `时，`Spring Social`会根据我们配置的`MyConnectionSignUp`返回`userId `，接着执行`userDetailsService.loadUserByUserId(userId)`，实现社交账号登录。当取消掉`MyConnectionSignUp`则会抛出[BadCredentialsException](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#jdbcusersconnectionrepositoryfinduseridswithconnection)，`BadCredentialsException`由[SocialAuthenticationFilter](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#jdbcusersconnectionrepositoryfinduseridswithconnection)处理,跳转到默认的`/signup`请求，跳转之前会将当前的社交账号信息保存到`session`中。
-##### /socialRegister
+在[Spring-Security源码分析六-Spring-Social社交登录源码解析](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#jdbcusersconnectionrepositoryfinduseridswithconnection)中，我们得知，当配置`ConnectionSignUp `时，`Spring Social`会根据我们配置的`MyConnectionSignUp`返回`userId `，接着执行`userDetailsService.loadUserByUserId(userId)`，实现社交账号登录。当取消掉`MyConnectionSignUp`则会抛出[BadCredentialsException](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#jdbcusersconnectionrepositoryfinduseridswithconnection)，`BadCredentialsException`由[SocialAuthenticationFilter](https://longfeizheng.github.io/2018/01/16/Spring-Security%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E5%85%AD-Spring-Social%E7%A4%BE%E4%BA%A4%E7%99%BB%E5%BD%95%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/#socialauthenticationfilterdoauthentication)处理,跳转到默认的`/signup`注册请求，跳转之前会将当前的社交账号信息保存到`session`中。
+##### 添加自定义注册请求/socialRegister
 ```java
    @Override
     protected <T> T postProcess(T object) {
