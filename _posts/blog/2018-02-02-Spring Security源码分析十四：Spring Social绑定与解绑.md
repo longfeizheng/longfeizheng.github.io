@@ -212,7 +212,7 @@ public class SocialConnectionStatusView extends AbstractView {
 		return new RedirectView(path, true);
 	}
 ```
-#### 实现 connect/qqConnected视图
+##### 实现 connect/qqConnected视图
 ```java
     @Bean("connect/qqConnected")
     public View qqConnectedView() {
@@ -251,7 +251,7 @@ public class SocialConnectionStatusView extends AbstractView {
 		return connectionStatusRedirect(providerId, request);
 	}
 ```
-#### 实现connect/qqConnect视图
+##### 实现connect/qqConnect视图
 
 ```java
 /**
