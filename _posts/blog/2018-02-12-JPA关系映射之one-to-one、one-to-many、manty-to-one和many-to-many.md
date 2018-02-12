@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JPA关系映射之one-to-one、one-to-many、manty-to-one和many-to-many
+title: JPA关系映射之one-to-one、one-to-many、many-to-one和many-to-many
 categories: JPA
 description: JPA
 keywords: JPA
