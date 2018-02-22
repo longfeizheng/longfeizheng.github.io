@@ -44,6 +44,10 @@ navs:
     label: 链接
 
   -
+    href: /open-source/
+    label: 开源
+
+  -
     href: /about/
     label: 关于
 
