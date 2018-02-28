@@ -284,5 +284,10 @@ public class BookRepositoryTest {
 ```
 
 ## 代码下载 ##
-从我的 github 中下载，[https://github.com/longfeizheng/jpa-example](https://github.com/longfeizheng/jpa-example)
+从我的 github 中下载，[https://github.com/longfeizheng/jpa-example/tree/master/one-to-one-foreignkey](https://github.com/longfeizheng/jpa-example/tree/master/one-to-one-foreignkey)
 
+---
+[![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/xiaochengxu.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/xiaochengxu.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/xiaochengxu.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/xiaochengxu.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/xiaochengxu.png")
+
+> 🙂🙂🙂关注微信小程序**java架构师历程**
+上下班的路上无聊吗？还在看小说、新闻吗？不知道怎样提高自己的技术吗？来吧这里有你需要的java架构文章，1.5w+的java工程师都在看，你还在等什么？
