@@ -319,6 +319,7 @@ public class Publisher {
 - `@Column` 声明该属性与数据库字段的映射关系。
 - `@ManyToMany` 多对多关联关系
 - `@JoinColumn` 指定关联的字段
+- `@JoinTable` [参考](https://stackoverflow.com/questions/5478328/jpa-jointable-annotation)
 
 ##### Spring Data JPA Repository
 ###### BookRepository
