@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JPA关系映射系列五：many-to-many 关联表存在额外字段关联映射
+title: JPA关系映射系列五：many-to-many 关联表存在额外字段关系映射
 categories: JPA
 description: JPA
 keywords: JPA
