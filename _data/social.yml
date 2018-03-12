@@ -14,6 +14,14 @@
   name: 淡淡的伤你
   url: http://weibo.com/2240567614/profile?rightmod=1&wvr=6&mod=personinfo
 
+- sitename: 掘金
+  name: 郑龙飞
+  url: https://juejin.im/user/57732ad92e958a0056d5e00d
+
+- sitename: 开源中国
+  name: 郑龙飞
+  url: https://my.oschina.net/merryyou/blog
+
 - sitename: QQ
   name: 50%
   url: tencent://message/?uin=837691512&Site=121ask.com&Meu=yes
