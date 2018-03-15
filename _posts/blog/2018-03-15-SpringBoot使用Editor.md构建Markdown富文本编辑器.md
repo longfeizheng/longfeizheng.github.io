@@ -19,11 +19,18 @@ keywords: SpringBoot
 
 ### 配置Editor.md
 
-将exapmles文件夹中的simple.html放置到项目中，并配置置对应的css和js文件
+将exapmles文件夹中的simple.html放置到项目中，并配置对应的css和js文件
 
 #### 配置编辑器
 
 ```html
+......
+	<script src="${re.contextPath}/jquery.min.js"></script>
+    <script src="${re.contextPath}/editor/editormd.min.js"></script>
+    <link rel="stylesheet" href="${re.contextPath}/editor/css/style.css"/>
+    <link rel="stylesheet" href="${re.contextPath}/editor/css/editormd.css"/>
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
+......
 <!-- 存放源文件用于编辑 -->
  <textarea style="display:none;" id="textContent" name="textContent">
 </textarea>
