@@ -26,4 +26,8 @@
   name: 50%
   url: tencent://message/?uin=837691512&Site=121ask.com&Meu=yes
 
+- sitename: 邮箱
+  name: i@merryyou.cn
+  url: mailto:i@merryyou.cn
+
 
