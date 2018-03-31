@@ -209,7 +209,7 @@ services:
       - nginx
 ```
 
--` version: '2'`： 表示使用第二代语法来构建 `docker-compose.yaml` 文件；
+- `version: '2'`： 表示使用第二代语法来构建 `docker-compose.yaml` 文件；
 - `services`: 用来表示 `compose` 需要启动的服务，我们可以看出此文件中有三个服务分别为：nginx、app-1、app-2。
 - `container_name`:容器名称
 - `ports`:表示对外开放的端口
