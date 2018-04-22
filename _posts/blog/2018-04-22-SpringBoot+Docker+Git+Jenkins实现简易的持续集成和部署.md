@@ -30,15 +30,17 @@ keywords: 微服务
 
 ### Jenkins安装
 
+#### 下载jenkins
 从[https://jenkins.io/download/](https://jenkins.io/download/)下载对应的`jenkins`
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker07.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker07.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker07.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker07.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker07.png")
 
-
+#### 初始化密码
 访问本地：[http://localhost:8080](http://localhost:8080)输入密码
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png")
 
+####选择插件
 进入用户自定义插件界面，选择第二个（因为我们本次构建使用的为`Pipelines `）
 
 勾选与`Pipelines `相关的插件
@@ -49,14 +51,18 @@ keywords: 微服务
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker06.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker06.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker06.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker06.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker06.png")
 
-配置用户名和密码
+#### 配置用户名和密码
+
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker08.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker08.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker08.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker08.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker08.png")
 
-系统管理-》全局工具配置 配置Git,JKD和Maven
+#### 全局配置
+
+系统管理-》全局工具配置 配置Git,JDK和Maven
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker09.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker09.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker09.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker09.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker09.png")
 
+#### 安全配置
 系统管理-》全局安全配置 
 
 - 勾选Allow anonymous read access
@@ -64,30 +70,52 @@ keywords: 微服务
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker10.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker10.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker10.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker10.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker10.png")
 
+#### 新建任务
 新建任务-》流水线
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker11.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker11.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker11.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker11.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker11.png")
 
+#### 构建脚本
 勾选触发远程构建 (WebHooks触发地址)，填写简单的`Pipeline script`
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker12.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker12.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker12.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker12.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker12.png")
 
+```groovy
+#!groovy
+pipeline{
+	agent any
+
+	stages {
+
+		stage('test'){
+			steps {
+				echo "hello world"
+			
+			}
+		}			
+	}
+}
+```
+
+#### 测试脚本
 立即构建
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png")
 
+#### 打印
 控制台输出
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png")
 
 ### gitee集成WebHooks
 
-添加SSH公匙
+
+#### 添加SSH公匙
 
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker15.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker15.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker15.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker15.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker15.png")
 
-配置WebHooks
+#### 配置WebHooks
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker16.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker16.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker16.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker16.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker16.png")
 
