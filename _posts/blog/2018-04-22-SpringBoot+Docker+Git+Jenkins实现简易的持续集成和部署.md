@@ -40,7 +40,7 @@ keywords: 微服务
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker04.png")
 
-####选择插件
+#### 选择插件
 进入用户自定义插件界面，选择第二个（因为我们本次构建使用的为`Pipelines `）
 
 勾选与`Pipelines `相关的插件
@@ -102,7 +102,6 @@ pipeline{
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker13.png")
 
-#### 打印
 控制台输出
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/docker/docker14.png")
