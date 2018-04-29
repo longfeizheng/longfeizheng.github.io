@@ -15,7 +15,7 @@ keywords: Security
 
 ### 修改pom.xml
 
-、更新Spring Boot 版本为`Spring Boot 2.0.1.RELEASE`
+更新`Spring Boot `版本为`Spring Boot 2.0.1.RELEASE`
 
 ```xml
    <parent>
@@ -28,7 +28,7 @@ keywords: Security
 
 ### 新增SecurityConfig配置
 
-新增SecurityConfig用于暴露`AuthenticationManager`
+新增`SecurityConfig`用于暴露`AuthenticationManager`
 
 ```java
 @Configuration
@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 修改MerryyouAuthorizationServerConfig
 
-修改MerryyouAuthorizationServerConfig用于加密clientsecret和设置重定向地址
+修改`MerryyouAuthorizationServerConfig`用于加密`clientsecret`和设置重定向地址
 
 ```java
 ......
@@ -138,6 +138,7 @@ merryyou:
 ## 参考 ##
 - [https://github.com/lexburner/oauth2-demo](https://github.com/lexburner/oauth2-demo)
 - [https://stackoverflow.com/questions/49122867/spring-boot-2-0-0-oauth2](https://stackoverflow.com/questions/49122867/spring-boot-2-0-0-oauth2)
+- [https://www.jianshu.com/p/be2c09cd27d8?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-friends](https://www.jianshu.com/p/be2c09cd27d8?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-friends)
 
 ## 推荐文章
 1. [Java创建区块链系列](https://longfeizheng.github.io/categories/#%E5%8C%BA%E5%9D%97%E9%93%BE)
