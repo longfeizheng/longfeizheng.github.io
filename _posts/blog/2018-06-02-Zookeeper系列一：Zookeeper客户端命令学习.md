@@ -765,6 +765,8 @@ wchc is not executed because it is not in the whitelist.
 [root@localhost bin]# echo wchp | nc 192.168.0.68 2181
 wchp is not executed because it is not in the whitelist.
 ```
+## 总结
+熟悉`zookeeper`基础命令操作后，再使用`zookeeper`提供的`api`或者第三方封装的`api`,会感觉一目了然。
 
 ## 推荐文章
 1. [Java创建区块链系列](https://longfeizheng.github.io/categories/#%E5%8C%BA%E5%9D%97%E9%93%BE)
