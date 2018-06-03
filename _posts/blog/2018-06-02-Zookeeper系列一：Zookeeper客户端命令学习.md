@@ -33,6 +33,8 @@ Usage: ./zkServer.sh {start|start-foreground|stop|restart|status|upgrade|print-c
 ```
 ####  查看zk的运行状态
 - `./zkServer.sh status` 由于我已经配置了`zk`的集群，所以此处显示状态为`leader`
+
+
 ```shell
 [root@localhost bin]# ./zkServer.sh status
 ZooKeeper JMX enabled by default
@@ -40,6 +42,7 @@ Using config: /usr/home/zookeeper-3.4.11/bin/../conf/zoo.cfg
 Mode: leader
 ```
 #### 客户端链接zk
+
 ```shell
 [root@localhost bin]# ./zkCli.sh 
 ......
@@ -48,6 +51,8 @@ WatchedEvent state:SyncConnected type:None path:null
 ```
 #### help 查看客户端帮助命令
 - `help`
+
+
 ```shell
 [zk: localhost:2181(CONNECTED) 0] help
 ZooKeeper -server host:port cmd args
@@ -76,6 +81,8 @@ ZooKeeper -server host:port cmd args
 ```
 #### ls 查看
 - `ls`  查看命令(`niocoder`是我测试集群创建的节点，默认只有`zookeeper`一个节点)
+
+
 ```shell
 [zk: localhost:2181(CONNECTED) 1] ls /
 [niocoder, zookeeper]
@@ -97,6 +104,8 @@ ZooKeeper -server host:port cmd args
 - ephemeralOwner ：判断是否是临时节点
 - dataLength ： 数据的长度
 - numChildren ：子节点的数量
+
+
 ```shell
 [zk: localhost:2181(CONNECTED) 7] get /zookeeper #下面空行说明节点内容为空
 
@@ -115,6 +124,8 @@ numChildren = 1
 ```
 #### stat 获得节点的更新信息
 - `stat`
+
+
 ```shell
 [zk: localhost:2181(CONNECTED) 8] stat /zookeeper
 cZxid = 0x0
@@ -131,6 +142,8 @@ numChildren = 1
 ```
 #### ls2 ls命令和stat命令的整合
 - `ls2`
+
+
 ```shell
 [zk: localhost:2181(CONNECTED) 10] ls2 /zookeeper
 [quota]
@@ -171,6 +184,8 @@ numChildren = 0
 ```
 #### create -e  创建临时节点
 - `create -e`
+
+
 ```shell
 #创建临时节点
 [zk: localhost:2181(CONNECTED) 4] create -e  /merryyou/temp merryyou
@@ -206,7 +221,7 @@ numChildren = 0
 WATCHER::
 
 WatchedEvent state:SyncConnected type:None path:null
-# 因为默认的心跳机制，此时查询临时节点还存在
+#因为默认的心跳机制，此时查询临时节点还存在
 [zk: localhost:2181(CONNECTED) 0] ls /merryyou
 [temp]
 #再次查询，临时节点消失
@@ -216,6 +231,8 @@ WatchedEvent state:SyncConnected type:None path:null
 ```
 #### create -s  创建顺序节点 自动累加
 - `create -s`
+
+
 ```shell
 # 创建顺序节点，顺序节点会自动累加
 [zk: localhost:2181(CONNECTED) 2] create -s /merryyou/sec seq
@@ -224,6 +241,7 @@ Created /merryyou/sec0000000001
 Created /merryyou/sec0000000002 
 ```
 #### set path data [version] 修改节点
+
 ```shell
 [zk: localhost:2181(CONNECTED) 6] get /merryyou
 merryyou
@@ -265,7 +283,7 @@ aclVersion = 0
 ephemeralOwner = 0x0
 dataLength = 12
 numChildren = 2
-# set 根据版本号更新 dataVersion 乐观锁
+#set 根据版本号更新 dataVersion 乐观锁
 [zk: localhost:2181(CONNECTED) 9] set /merryyou test-merryyou 1
 cZxid = 0x200000004
 ctime = Sat Jun 02 14:20:06 UTC 2018
@@ -278,11 +296,12 @@ aclVersion = 0
 ephemeralOwner = 0x0
 dataLength = 13
 numChildren = 2
-# 因为数据的版本号已经修改为2 再次使用版本号1修改节点提交错误
+#因为数据的版本号已经修改为2 再次使用版本号1修改节点提交错误
 [zk: localhost:2181(CONNECTED) 10] set /merryyou test-merryyou 1
 version No is not valid : /merryyou
 ```
 #### delete path [version] 删除节点
+
 ```shell
 [zk: localhost:2181(CONNECTED) 13] delete /merryyou/sec000000000
 
@@ -291,7 +310,7 @@ sec0000000001   sec0000000002
 [zk: localhost:2181(CONNECTED) 14] ls /merryyou
 [sec0000000002]
 [zk: localhost:2181(CONNECTED) 15] 
-# 版本号操作与set类似 version
+#版本号操作与set类似 version
 ```
 
 #### watcher通知机制
@@ -302,11 +321,12 @@ sec0000000001   sec0000000002
 - 子节点创建和删除时触发watch事件，子节点修改不会触发该事件
 
 ##### stat path [watch] 设置watch事件
+
 ```shell
-# 添加watch 事件
+#添加watch 事件
 [zk: localhost:2181(CONNECTED) 18] stat /longfei watch
 Node does not exist: /longfei
-# 创建longfei节点时触发watcher事件
+#创建longfei节点时触发watcher事件
 [zk: localhost:2181(CONNECTED) 19] create /longfei test
 
 WATCHER::
@@ -315,8 +335,9 @@ WatchedEvent state:SyncConnected type:NodeCreated path:/longfei
 Created /longfei
 ```
 ##### get path [watch] 设置watch事件
+
 ```shell
-# 使用get命令添加watch事件
+#使用get命令添加watch事件
 [zk: localhost:2181(CONNECTED) 20] get /longfei watch
 test
 cZxid = 0x20000000e
@@ -348,7 +369,7 @@ ephemeralOwner = 0x0
 dataLength = 8
 numChildren = 0
 [zk: localhost:2181(CONNECTED) 22] 
-# 删除触发watcher事件
+#删除触发watcher事件
 [zk: localhost:2181(CONNECTED) 23] get /longfei watch
 new_test
 cZxid = 0x20000000e
@@ -382,6 +403,7 @@ ZK的节点有5种操作权限：`CREATE`、`READ`、`WRITE`、`DELETE`、`ADMIN
 使用`[scheme:id:permissions]`来表示acl权限
 
 ##### getAcl:获取某个节点的acl权限信息
+
 ```shell
 #获取节点权限信息默认为 world:cdrwa任何人都可以访问
 [zk: localhost:2181(CONNECTED) 34] getAcl /merryyou
@@ -389,14 +411,16 @@ ZK的节点有5种操作权限：`CREATE`、`READ`、`WRITE`、`DELETE`、`ADMIN
 : cdrwa
 [zk: localhost:2181(CONNECTED) 35] 
 ```
+
 ##### setAcl 设置权限
+
 ```shell
 [zk: localhost:2181(CONNECTED) 35] create /merryyou/test test
 Created /merryyou/test
 [zk: localhost:2181(CONNECTED) 36] getAcl /merryyou/test
 'world,'anyone
 : cdrwa
-# 设置节点权限 crwa 不允许删除
+#设置节点权限 crwa 不允许删除
 [zk: localhost:2181(CONNECTED) 37] setAcl /merryyou/test world:anyone:crwa
 cZxid = 0x200000018
 ctime = Sat Jun 02 16:18:18 UTC 2018
@@ -409,17 +433,17 @@ aclVersion = 1
 ephemeralOwner = 0x0
 dataLength = 4
 numChildren = 0
-# 查询刚才设置的acl权限信息 crwa 没有删除权限
+#查询刚才设置的acl权限信息 crwa 没有删除权限
 [zk: localhost:2181(CONNECTED) 38] getAcl /merryyou/test
 'world,'anyone
 : crwa
 [zk: localhost:2181(CONNECTED) 39] 
 [zk: localhost:2181(CONNECTED) 39] create /merryyou/test/abc abc
 Created /merryyou/test/abc
-# 删除子节点的时候提交权限不足
+#删除子节点的时候提交权限不足
 [zk: localhost:2181(CONNECTED) 40] delete /merryyou/test/abc
 Authentication is not valid : /merryyou/test/abc
-# 设置节点的权限信息为rda
+#设置节点的权限信息为rda
 [zk: localhost:2181(CONNECTED) 41] setAcl /merryyou/test world:anyone:rda 
 cZxid = 0x200000018
 ctime = Sat Jun 02 16:18:18 UTC 2018
@@ -435,12 +459,12 @@ numChildren = 1
 [zk: localhost:2181(CONNECTED) 42] getAcl /merryyou/test
 'world,'anyone
 : dra
-# 可以成功删除
+#可以成功删除
 [zk: localhost:2181(CONNECTED) 43] delete /merryyou/test/abc             
 [zk: localhost:2181(CONNECTED) 46] ls /merryyou/test
 []
 [zk: localhost:2181(CONNECTED) 47] 
-# 设置节点信息为a admin
+#设置节点信息为a admin
 [zk: localhost:2181(CONNECTED) 47] setAcl /merryyou/test world:anyone:a  
 cZxid = 0x200000018
 ctime = Sat Jun 02 16:18:18 UTC 2018
@@ -453,7 +477,7 @@ aclVersion = 3
 ephemeralOwner = 0x0
 dataLength = 4
 numChildren = 0
-# 获取 设置都提示权限不足
+#获取 设置都提示权限不足
 [zk: localhost:2181(CONNECTED) 49] get /merryyou/test
 Authentication is not valid : /merryyou/test
 [zk: localhost:2181(CONNECTED) 50] set /merryyou/test 123
@@ -487,13 +511,14 @@ aclVersion = 1
 ephemeralOwner = 0x0
 dataLength = 8
 numChildren = 0
-# 查询节点权限信息 密码为密文格式
+#查询节点权限信息 密码为密文格式
 [zk: localhost:2181(CONNECTED) 5] getAcl /niocoder/merryyou
 'digest,'test:V28q/NynI4JI3Rk54h0r8O5kMug=
 : cdrwa
 [zk: localhost:2181(CONNECTED) 6] 
 ```
 #####  acl digest 密码密文设置
+
 ```shell 
 [zk: localhost:2181(CONNECTED) 13] create /names test
 Created /names
@@ -544,6 +569,7 @@ Authentication is not valid : /names
 ```
 
 #####  acl ip 控制客户端
+
 ```shell
 [zk: localhost:2181(CONNECTED) 22] create /niocoder/ip aa
 Created /niocoder/ip
@@ -580,6 +606,8 @@ numChildren = 0
 ```
 #####  acl super超级管理员
 使用`super`权限需要修改`zkServer.sh`，添加`super`管理员，重启`zkServer.sh`
+
+
 ```shell 
 "-Dzookeeper.DigestAuthenticationProvider.superDigest=test:V28q/NynI4JI3Rk54h0r8O5kMug="
  nohup "$JAVA" "-Dzookeeper.log.dir=${ZOO_LOG_DIR}" "-Dzookeeper.root.logger=${ZOO_LOG4J_PROP}" "-Dzookeeper.DigestAuthenticationprovider.superDigest=test:V28q/NynI4JI3Rk54h0r8O5kMug=" \
@@ -611,7 +639,10 @@ numChildren = 0
 ```
 #### 四字命令Four Letter Words
 - 使用四字命令需要安装`nc`命令,(`yum install nc`)
+
+
 ##### stat 查看状态信息 
+
 ```shell
 [root@localhost bin]# echo stat | nc 192.168.0.68 2181
 Zookeeper version: 3.4.11-37e277162d567b55a07d1755f0b31c32e93c01a0, built on 11/01/2017 18:06 GMT
@@ -629,11 +660,13 @@ Node count: 10
 [root@localhost bin]# 
 ```
 ##### ruok 查看zookeeper是否启动
+
 ```shell 
 [root@localhost bin]# echo ruok | nc 192.168.0.68 2181
 imok[root@localhost bin]# 
 ```
 ##### dump 列出没有处理的节点，临时节点 
+
 
 ```shell 
 imok[root@localhost bin]# echo dump | nc 192.168.0.68 2181
@@ -644,6 +677,7 @@ Sessions with Ephemerals (0):
 [root@localhost bin]# 
 ```
 ##### conf 查看服务器配置
+
 ```shell 
 [root@localhost bin]# echo conf | nc 192.168.0.68 2181
 clientPort=2181
@@ -663,6 +697,7 @@ peerType=0
 [root@localhost bin]# 
 ```
 ##### cons 显示连接到服务端的信息
+
 ```shell 
 [root@localhost bin]# echo cons | nc 192.168.0.68 2181
  /192.168.0.68:49354[0](queued=0,recved=1,sent=0)
@@ -670,6 +705,7 @@ peerType=0
 [root@localhost bin]# 
 ```
 ##### envi 显示环境变量信息
+
 ```shell 
 [root@localhost bin]# echo envi | nc 192.168.0.68 2181
 Environment:
@@ -691,6 +727,7 @@ user.dir=/usr/home/zookeeper-3.4.11/bin
 [root@localhost bin]#
 ```
 ##### mntr 查看zk的健康信息
+
 ```shell 
 [root@localhost bin]# echo mntr | nc 192.168.0.68 2181
 zk_version	3.4.11-37e277162d567b55a07d1755f0b31c32e93c01a0, built on 11/01/2017 18:06 GMT
@@ -711,6 +748,7 @@ zk_max_file_descriptor_count	4096
 [root@localhost bin]# 
 ```
 ##### wchs 展示watch的信息
+
 ```shell 
 [root@localhost bin]# echo wchs | nc 192.168.0.68 2181
 0 connections watching 0 paths
@@ -719,6 +757,7 @@ Total watches:0
 
 ```
 ##### wchc和wchp 显示session的watch信息 path的watch信息 
+
 - 需要在 配置`zoo.cfg`文件中添加 `4lw.commands.whitelist=*`
 ```shell
 [root@localhost bin]# echo wchc | nc 192.168.0.68 2181
