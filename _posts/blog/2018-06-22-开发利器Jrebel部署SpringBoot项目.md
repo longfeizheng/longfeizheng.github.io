@@ -10,12 +10,12 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot06.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot06.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot06.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot06.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot06.png")
 
-### idea下载和安装JRebel
+#### idea下载和安装JRebel
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot07.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot07.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot07.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot07.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot07.png")
 
 
-### 激活JRebel
+#### 激活JRebel
 
 - 访问[https://my.jrebel.com/](https://my.jrebel.com/)
 - 使用[facebook](https://www.facebook.com/longfei.zheng.589)或[twitter](https://twitter.com/xiayebaibi)登录
@@ -25,11 +25,11 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot09.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot09.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot09.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot09.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot09.png")
 
-### 勾选 Build project automatically
+#### 勾选 Build project automatically
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot10.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot10.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot10.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot10.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot10.png")
 
-### 快捷键 ctrl+shift+alt+/ 选择 Retistry
+#### 快捷键 ctrl+shift+alt+/ 选择 Retistry
 
 - 勾选compiler.automake.allow.when.app.running
 
@@ -37,7 +37,7 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot12.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot12.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot12.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot12.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot12.png")
 
-### 勾选需要热部署的模块
+#### 勾选需要热部署的模块
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot02.gif](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot02.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot02.gif")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot02.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot02.gif")
 
@@ -45,7 +45,7 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot17.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot17.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot17.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot17.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot17.png")
 
-### 配置 Run Dashboard
+#### 配置 Run Dashboard
 
 - 默认启动控制台
 
@@ -61,7 +61,7 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot16.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot16.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot16.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot16.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot16.png")
 
-### 使用JRebel 启动后效果如下
+#### 使用JRebel 启动后效果如下
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif")
 
