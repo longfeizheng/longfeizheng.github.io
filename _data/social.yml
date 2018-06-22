@@ -20,7 +20,7 @@
 
 - sitename: 开源中国
   name: 郑龙飞
-  url: https://my.oschina.net/merryyou/blog
+  url: https://my.oschina.net/merryyou
 
 - sitename: 博客园
   name: 郑龙飞
@@ -33,5 +33,9 @@
 - sitename: 邮箱
   name: i@merryyou.cn
   url: mailto:i@merryyou.cn
+
+- sitename: 微信
+  name: ▇▇▇□□□50%
+  url: https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/weixin.png
 
 
