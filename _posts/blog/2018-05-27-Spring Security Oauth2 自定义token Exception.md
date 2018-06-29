@@ -12,9 +12,6 @@ keywords: Security
 
 ## 前言 ##
 
-
-## 前言 ##
-
 在使用`Spring Security Oauth2`登录和鉴权失败时，默认返回的异常信息如下
 ```java
 {
@@ -82,7 +79,7 @@ public class CustomOauthExceptionSerializer extends StdSerializer<CustomOauthExc
 
 #### 添加CustomWebResponseExceptionTranslator
 
--- 添加`CustomWebResponseExceptionTranslator`，登录发生异常时制定`exceptionTranslator`
+- 添加`CustomWebResponseExceptionTranslator`，登录发生异常时指定`exceptionTranslator`
 
 ```java
 public class CustomOauthExceptionSerializer extends StdSerializer<CustomOauthException> {
@@ -142,7 +139,7 @@ public class CustomOauthExceptionSerializer extends StdSerializer<CustomOauthExc
 ### 自定义Token异常信息 ##
 
 #### 添加AuthExceptionEntryPoint
--  自定义`AuthExceptionEntryPoint`用于登录失败返回信息
+-  自定义`AuthExceptionEntryPoint`用于`tokan`校验失败返回信息
 
 ```java
 public class AuthExceptionEntryPoint implements AuthenticationEntryPoint {
@@ -171,7 +168,7 @@ public class AuthExceptionEntryPoint implements AuthenticationEntryPoint {
 ```
 
 #### 添加CustomAccessDeniedHandler
-- 授权失败时时返回信息
+- 授权失败(forbidden)时返回信息
 
 ```java
 @Slf4j
