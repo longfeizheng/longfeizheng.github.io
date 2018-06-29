@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Security Oauth2 自定义OAuth2Exceptions
+title: Spring Security Oauth2 自定义 OAuth2 Exception
 categories: Security
 description: Security
 keywords: Security
