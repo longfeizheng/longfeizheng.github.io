@@ -65,6 +65,10 @@ keywords: SpringBoot
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot03.gif")
 
+#### 最新激活方式
+
+[https://blog.xihefeng.com/archives/205.html](https://blog.xihefeng.com/archives/205.html)
+
 
 ## 推荐文章
 1. [Java创建区块链系列](https://longfeizheng.github.io/categories/#%E5%8C%BA%E5%9D%97%E9%93%BE)
