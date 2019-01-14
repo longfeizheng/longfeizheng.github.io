@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BeanFactory(一)
+title: Small Spring系列一：BeanFactory(一)
 categories: Spring
 description: Spring
 keywords: Spring
