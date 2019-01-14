@@ -298,3 +298,6 @@ public class BeanFactoryTest {
 ## 代码下载 ##
 
 - github:[https://github.com/longfeizheng/small-spring/tree/20190914_BeanFactory_v1](https://github.com/longfeizheng/small-spring/tree/20190914_BeanFactory_v1)
+
+## 类图 ##
+[![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png")
