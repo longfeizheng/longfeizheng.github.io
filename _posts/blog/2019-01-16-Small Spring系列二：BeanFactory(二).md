@@ -100,7 +100,7 @@ public class DefaultBeanFactory implements BeanFactory {
 
 #### XmlBeanDefinitionReader ####
 
-读取iexi`bean.xml`文件
+读取解析`bean.xml`文件
 
 ```java
 /**
