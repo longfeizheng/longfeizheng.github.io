@@ -301,3 +301,8 @@ public class BeanFactoryTest {
 
 ## 类图 ##
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/beanfactory_v1.png")
+
+## 参考资料 ##
+
+---
+[从零开始造Spring](https://mp.weixin.qq.com/s/gbvdwpPtQcjyaigRBDjd-Q)
