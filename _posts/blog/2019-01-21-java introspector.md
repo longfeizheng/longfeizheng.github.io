@@ -8,7 +8,10 @@ keywords: Java
 
 > 人生若只如初见，何事秋风悲画扇。
 
-[![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java04.mp4](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java04.mp4 "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java04.mp4")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java04.mp4 "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java04.mp4")
+<video id="video" controls="" preload="none" poster="http://www.merryyou.cn/mp4/java04.png">
+      <source id="mp4" src="http://www.merryyou.cn/mp4/java04.mp4" type="video/mp4">
+
+    </video>
 
 ## 概述
 
