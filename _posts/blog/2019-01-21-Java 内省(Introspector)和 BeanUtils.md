@@ -287,3 +287,10 @@ Caused by: java.lang.IllegalArgumentException: argument type mismatch
 
 Process finished with exit code 1
 ```
+
+## 代码下载 ##
+
+- github:[https://github.com/longfeizheng/small-spring/tree/master/src/test/java/com/niocoder/test/introspector](https://github.com/longfeizheng/small-spring/tree/master/src/test/java/com/niocoder/test/introspector)
+
+## 参考链接 ##
+- [Java 内省(Introspector)深入理解](https://www.cnblogs.com/uu5666/p/8601983.html)
