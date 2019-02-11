@@ -98,7 +98,7 @@ public class NioCoderService {
 </beans>
 ```
 ### Component和Autowired注解
-`Component`注解主要用于类名上，表明该类为一个注册到容器中的`bean`。`Autowired`注解主要用于属性和方法(构造方法,`setter`方法)上，表明该类实例化时会自动将对应的属性注入。
+`Component`注解主要用于类名上，表明该类为一个注册到容器中的`bean`。`Autowired`注解主要用于属性和方法(构造方法,`setter`方法)上，表明该类初始化时会自动将对应的属性注入。
 
 #### Component
 
