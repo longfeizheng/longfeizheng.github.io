@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: 谦和之中见卓越
+description: 人生如逆旅，我亦是行人
 keywords: longfeizheng
 comments: true
 menu: 关于
@@ -11,12 +11,12 @@ permalink: /about/
 
 ### 0x1 序
 
-> **谦和之中见卓越**
+> **人生如逆旅，我亦是行人**
 
 
 ### 0x2 工作状况
 
-> **Java Web Developer 1枚，目前就职资和信电子支付；主要负责后端开发**
+> **Java Web Developer 1枚，目前就职人人车；主要负责后端开发**
 
 ### 0x3 职业技能
 
@@ -40,7 +40,7 @@ permalink: /about/
 >
 > **Spring 学习中**
 
-### 0x5 See You Again
+### 0x5 姑娘
 
 See You Again
 ## 联系
@@ -65,6 +65,6 @@ See You Again
 ---
 
 <audio  autoplay="autoplay">
-  <source src="http://merryyou.cn/lover/music/music_see_you_again.mp3" type="audio/mpeg" />
+  <source src="http://merryyou.cn/lover/music/gu_niang.mp3" type="audio/mpeg" />
 Your browser does not support the audio element.
 </audio>
