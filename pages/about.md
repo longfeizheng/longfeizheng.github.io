@@ -42,7 +42,7 @@ permalink: /about/
 
 ### 0x5 姑娘
 
-See You Again
+姑娘
 ## 联系
 
 {% for website in site.data.social %}
