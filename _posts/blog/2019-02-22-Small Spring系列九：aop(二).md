@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Small Spring系列九：aop(二)
+title: Small Spring系列九：aop (二)
 categories: Spring
 description: Spring
 keywords: Spring
