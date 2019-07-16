@@ -16,7 +16,7 @@ permalink: /about/
 
 ### 0x2 工作状况
 
-> **Java Web Developer 1枚，目前就职人人车；主要负责后端开发**
+> **Java Web Developer 1枚，目前就职京东数科**
 
 ### 0x3 职业技能
 
@@ -39,6 +39,8 @@ permalink: /about/
 > **Spring Security 学习中**
 >
 > **Spring 学习中**
+>
+> **Spring Cloud 学习中**
 
 ### 0x5 姑娘
 
