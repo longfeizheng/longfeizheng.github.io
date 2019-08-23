@@ -85,7 +85,7 @@
       };
       var yunManualLoad = true;
       Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-        <-- 生成 gitalk 插件-->
+       
 var gitalk = new Gitalk({
   clientID: '1efaea58424032e0cd5e', //Client ID
 
@@ -96,9 +96,9 @@ var gitalk = new Gitalk({
   admin: ['longfeizheng'],
   id: location.href,      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
-})
+});
 
-gitalk.render('gitalk-container')
+gitalk.render('gitalk-container');
       </script>
     {% endif %}
   {% endcase %}
