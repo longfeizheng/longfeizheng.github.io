@@ -37,7 +37,8 @@
     {% when 'netease_gentie' %}
       {% if site.lazy_load_disqus and site.disqus_username %}
         <a href="#" class="show_disqus_comment" onclick="return false;">Show Disqus Comments</a>		
-        <div id="disqus_thread"></div>		
+        <div id="disqus_thread"></div>
+        <div id="gitalk-container"></div>
         <script>		
         var disqus_config = function () {		
             this.page.url = '{{ site.url }}{{ page.url }}';		
@@ -72,6 +73,9 @@
       {% if site.netease_gentie_key %}
       <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
       <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+      <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
       <script>
       var cloudTieConfig = {
           url: "", 
@@ -81,6 +85,20 @@
       };
       var yunManualLoad = true;
       Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+        <-- 生成 gitalk 插件-->
+var gitalk = new Gitalk({
+  clientID: '1efaea58424032e0cd5e', //Client ID
+
+  clientSecret: '08b3113e81f2fd763cb411035d74fc8547bf8ac3', //Client Secret
+
+  repo: 'blog-comments',//仓库名称
+  owner: 'longfeizheng',//仓库拥有者
+  admin: ['longfeizheng'],
+  id: location.href,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
       </script>
     {% endif %}
   {% endcase %}
