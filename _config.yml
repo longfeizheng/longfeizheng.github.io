@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mazhuang.org
+url: https://niocoder.com/
 date_format: "ordinal"
 title: Blog_龙飞
 subtitle: "人生如逆旅,我亦是行人"
@@ -63,7 +63,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
-paginate: 8
+paginate: 10
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
