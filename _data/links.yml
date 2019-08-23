@@ -4,9 +4,6 @@
 - name: hsweb企业后台管理系统基础框架
   url: http://www.hsweb.me/
 
-- name: Merryyou
-  url: http://www.merryyou.cn/
-
 - name: 码志
   url: http://mazhuang.org
   
@@ -15,3 +12,6 @@
   
 - name: fireflyi博客
   url: https://www.fireflyi.com/
+  
+- name: 猿天地
+  url: http://cxytiandi.com/
