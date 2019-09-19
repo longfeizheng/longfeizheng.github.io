@@ -76,6 +76,7 @@ keywords: Elastic-Job
 1. 下载[elastic-job-spring-boot-starter](https://github.com/longfeizheng/elastic-job-spring-boot-starter) 使用`maven` 命令`install`到本地
 2. 创建 `demo-elastic-job`项目
 目录结构如下：
+
 ```xml
 demo-elastic-job
 ├── mvnw
