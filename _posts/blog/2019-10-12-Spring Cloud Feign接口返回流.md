@@ -6,6 +6,7 @@ description: Feign
 keywords: Feign
 ---
 
+> 身无彩凤双飞翼，心有灵犀一点通。
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java16.jpg](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java16.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java16.jpg")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java16.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java16.jpg")
 
 
