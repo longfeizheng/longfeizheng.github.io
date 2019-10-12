@@ -79,5 +79,3 @@ keywords: Feign
 > 🙂🙂🙂关注微信公众号**java干货**
 不定期分享干货资料
 
-
-原文链接：[What is Java JDK, JRE and JVM – In-depth Analysis](https://howtodoinjava.com/java/basics/jdk-jre-jvm/#interview-questions)
