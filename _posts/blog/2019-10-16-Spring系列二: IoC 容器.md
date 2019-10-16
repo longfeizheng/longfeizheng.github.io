@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列二: IoC 容器
+title: Spring系列二：IoC 容器
 categories: Spring
 description: Spring
 keywords: Spring
