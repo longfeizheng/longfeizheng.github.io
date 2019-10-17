@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列三: IoC 与 DI
+title: Spring系列三：IoC 与 DI
 categories: Spring
 description: Spring
 keywords: Spring
