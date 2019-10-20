@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列四: Bean Scopes作用域
+title: Spring系列四：Bean Scopes作用域
 categories: Spring
 description: Spring
 keywords: Spring
