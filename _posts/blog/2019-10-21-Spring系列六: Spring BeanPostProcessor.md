@@ -6,7 +6,7 @@ description: Spring
 keywords: Spring
 ---
 
-> 人如风後入江云，情似雨馀黏地絮。。
+> 人如风後入江云，情似雨馀黏地絮。
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring08.jpg](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring08.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring08.jpg")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring08.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring08.jpg")
 
