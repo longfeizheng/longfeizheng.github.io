@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列五：Bean 的声明周期
+title: Spring系列五：Bean 的生命周期
 categories: Spring
 description: Spring
 keywords: Spring
