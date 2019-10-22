@@ -124,4 +124,4 @@ Employee [id=-1, firstName=dummy, lastName=dummy, type=director]
 不定期分享干货资料
 
 
-原文链接：[Spring ResourceLoaderAware – Read file in Spring](https://howtodoinjava.com/spring-core/spring-resource-loader-aware/)
+原文链接：[Spring util:constant to refer final static field references](https://howtodoinjava.com/spring-core/spring-declare-beans-from-final-static-field-references-using-util-constant/)

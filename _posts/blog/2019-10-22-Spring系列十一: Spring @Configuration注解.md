@@ -161,4 +161,4 @@ public class VerifySpringCoreFeature
 不定期分享干货资料
 
 
-原文链接：[Spring ResourceLoaderAware – Read file in Spring](https://howtodoinjava.com/spring-core/spring-resource-loader-aware/)
+原文链接：[Spring @Configuration annotation example](https://howtodoinjava.com/spring-core/spring-configuration-annotation/)

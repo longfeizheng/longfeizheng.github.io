@@ -185,4 +185,4 @@ Employee [id=-1, firstName=dummy, lastName=dummy, type=Director]
 不定期分享干货资料
 
 
-原文链接：[Spring ResourceLoaderAware – Read file in Spring](https://howtodoinjava.com/spring-core/spring-resource-loader-aware/)
+原文链接：[Spring FactoryBean Example](https://howtodoinjava.com/spring-core/how-to-create-beans-using-spring-factorybean/)
