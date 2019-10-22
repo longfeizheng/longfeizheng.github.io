@@ -6,7 +6,7 @@ description: Spring
 keywords: Spring
 ---
 
-> 满目山河空念远，落花风雨更伤春。
+> 重叠泪痕缄锦字，人生只有情难死。
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring11.jpg](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring11.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring11.jpg")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring11.jpg "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/spring/spring11.jpg")
 
