@@ -214,4 +214,4 @@ public class CustomResourceLoader {
 不定期分享干货资料
 
 
-原文链接：[Spring Bean Autowiring – @Autowired](https://howtodoinjava.com/spring-core/spring-beans-autowiring-concepts/)
+原文链接：[Spring ResourceLoaderAware – Read file in Spring](https://howtodoinjava.com/spring-core/spring-resource-loader-aware/)

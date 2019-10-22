@@ -134,4 +134,4 @@ Called postProcessAfterInitialization() for : dao
 不定期分享干货资料
 
 
-原文链接：[Spring 5 – Bean scopes](https://howtodoinjava.com/spring-core/spring-bean-scopes/)
+原文链接：[Spring BeanPostProcessor Example](https://howtodoinjava.com/spring-core/spring-bean-post-processors/)
