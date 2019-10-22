@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列七：Spring 中读取文件-ResourceLoaderAware
+title: Spring系列八：Spring 中读取文件-ResourceLoaderAware
 categories: Spring
 description: Spring
 keywords: Spring
