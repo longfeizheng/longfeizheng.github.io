@@ -115,6 +115,7 @@ Employee [id=-1, firstName=dummy, lastName=dummy, type=director]
 ```
 
 > 当然，你可以直接在代码中使用字段引用，因为它们是静态字段。但是通过配置文件中定义它们使你可以在任何时候将实现从`MANAGER`更改为`DIRECTOR`，而无需编译源代码。
+
 ---
 [![https://niocoder.com/assets/images/qrcode.jpg](https://niocoder.com/assets/images/qrcode.jpg "https://niocoder.com/assets/images/qrcode.jpg")](https://niocoder.com/assets/images/qrcode.jpg "https://niocoder.com/assets/images/qrcode.jpg")
 
