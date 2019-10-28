@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring系列十三: Spring @Scheduled注解
+title: Spring系列十三：Spring @Scheduled注解
 categories: Spring
 description: Spring
 keywords: Spring
