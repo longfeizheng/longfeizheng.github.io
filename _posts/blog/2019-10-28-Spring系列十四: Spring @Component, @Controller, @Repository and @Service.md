@@ -211,4 +211,4 @@ Employee [id=1, firstName=Lokesh, lastName=Gupta]
 不定期分享干货资料
 
 
-原文链接：[Spring @Required Annotation](https://howtodoinjava.com/spring-core/spring-required-annotation-and-requiredannotationbeanpostprocessor-example/)
+原文链接：[Spring – @Component, @Controller, @Repository and @Service](https://howtodoinjava.com/spring-core/stereotype-annotations/)
