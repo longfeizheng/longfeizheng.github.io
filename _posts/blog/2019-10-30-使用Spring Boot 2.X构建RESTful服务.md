@@ -20,11 +20,11 @@ keywords: Java
 
 `Spring Initializr`是展开`Spring Boot`的第一步。它用于创建`Spring Boot`应用程序的项目结构。在开始`Spring Boot`之前，我们需要弄清项目结构并确定将配置文件，属性文件和静态文件保留在何处。打开基于Web的界面开始。如下图所示，填写字段，然后单击“生成项目”按钮。
 
-- Group: com.howtodoinjava.rest
-- Artifact: customerservice
-- Name: customerservice
-- Package Name: com.howtodoinjava.rest.customerservice
-- Dependencies: Web, JPA, H2
+- `Group`: `com.howtodoinjava.rest`
+- `Artifact`: `customerservice`
+- `Name`: `customerservice`
+- `Package Name`: `com.howtodoinjava.rest.customerservice`
+- `Dependencies`: `Web`, `JPA`, `H2`
 
 [![https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot19.png](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot19.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot19.png")](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot19.png "https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/springboot/springboot19.png")
 > `Spring Initializr`创建一个项目
@@ -143,12 +143,12 @@ keywords: Java
 
 我们使用基于`YAML`（一种标记语言）的属性文件将配置属性定义为比`application.properties`更具可读性。
 
-- spring:application:name=customer-service # application name
-- spring:h2:console:enabled=true # enable embedded h2 console. We are using the in-memory database.
-- spring:h2:console:path=/h2-console # Path at which the h2 console is available, we will use h2 console to check in memory data later on.
-- spring:jpa:show-sql=true # enable logging of SQL statements.
-- server:port=8088 # Server HTTP port.
-- server:servlet:context-path=/restapi # the base URL of the RESTful services
+- `spring:application:name=customer-service` # 项目名称。
+- `spring:h2:console:enabled=true` # 启用嵌入式h2控制台。使用内存数据库
+- `spring:h2:console:path=/h2-console` # `h2-console`的访问路径
+- `spring:jpa:show-sql=true` # 打印`sql`
+- `server:port=8088` # 服务的端口.
+- `server:servlet:context-path=/restapi` # `base URL`
 
 ```yaml
 spring:
