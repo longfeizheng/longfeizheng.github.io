@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 使用Spring Boot 2.X构建RESTful服务
-categories: Java
-description: Java
-keywords: Java
+categories: SpringBoot
+description: SpringBoot
+keywords: SpringBoot
 ---
 
 > 明月松间照，清泉石上流。
