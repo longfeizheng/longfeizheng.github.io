@@ -352,7 +352,10 @@ Map<Integer, LinkedList<String>> collect1 = strings
 这里指定了`Map`中需要的列表类型(`Libkedlist`)。
 
 
+---
+[![//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b3a50846a8d40c79b4db3de866b41d5~tplv-k3u1fbpfcp-zoom-1.image](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6897912b2f634918a7e30022071e12d9~tplv-k3u1fbpfcp-zoom-1.image "https://user-gold-cdn.xitu.io/2019/9/18/16d42fc88345bad5?w=258&h=258&f=jpeg&s=26702")](https://user-gold-cdn.xitu.io/2019/9/18/16d42fc88345bad5?w=258&h=258&f=jpeg&s=26702 "https://user-gold-cdn.xitu.io/2019/9/18/16d42fc88345bad5?w=258&h=258&f=jpeg&s=26702")
 
+> 🙂🙂🙂微信公众号**java干货**
 
 
 
