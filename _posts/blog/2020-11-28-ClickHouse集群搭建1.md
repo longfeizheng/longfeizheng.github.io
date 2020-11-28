@@ -122,19 +122,19 @@ keywords: ClickHouse
 
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/ch05.png)
 
-##### 拷贝公钥到同一台机器
+##### 拷贝公钥到`node01`机器
 
-三台机器将拷贝公钥到第一台机器
+三台机器将拷贝公钥到`node01`机器
 
 三台机器执行命令：
 
 `ssh-copy-id node01`
 
-##### 复制第一台机器的认证到其他机器
+##### 复制`node01`机器的认证到其他机器
 
 将第一台机器的公钥拷贝到其他机器上
 
-在第一天机器上面指向以下命令
+在`node01`机器上面执行以下命令
 
 `scp /root/.ssh/authorized_keys node02:/root/.ssh`
 
@@ -274,7 +274,7 @@ server.3=node03:2888:3888
 `grep -q sse4_2 /proc/cpuinfo && echo "SSE 4.2 supported" || echo "SSE 4.2 not supported"
 `
 
-#### 安装必要以来
+#### 安装必要依赖
 
 `yum install -y unixODBC libicudata `
 
