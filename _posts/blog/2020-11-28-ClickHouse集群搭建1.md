@@ -5,6 +5,7 @@ categories: ClickHouse
 description: ClickHouse
 keywords: ClickHouse
 ---
+
 > 满目山河空念远，落花风雨更伤春。
 
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java42.jpg)
@@ -74,17 +75,21 @@ keywords: ClickHouse
 更改`ip`地址和`HWADDR`地址
 
 `vim /etc/sysconfig/network-scripts/ifcfg-eth0`
+
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/ch01.png)
 
 `HWADDR`地址查看
+
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/ch04.png)
 
 修改主机名(重启后永久生效)
+
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/ch02.png)
 
 `vim /etc/hostname`
 
 设置`hosts`域名映射
+
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/wechat/ch03.png)
 
   `vim /etc/hosts`
