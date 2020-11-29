@@ -9,6 +9,7 @@ keywords: ClickHouse
 
 ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java43.jpg)
 
+
 ### 分布式集群安装
 
 在上一章我们已经完成`ClickHouse`分布式集群安装，也创建本地表和分布式表进行了测试，但是，假如停掉一个节点会发生神马情况？
