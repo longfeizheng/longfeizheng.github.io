@@ -197,6 +197,10 @@ export PATH=:$JAVA_HOME/bin:$PATH
 `scp /etc/profile node02:/etc/profile`
 `scp /etc/profile node03:/etc/profile`
 
+刷新环境变量
+
+`source /etc/profile`
+
 ####  安装`Zookeeper`
 
 | 服务器IP        | 主机名 | myid的值 |
