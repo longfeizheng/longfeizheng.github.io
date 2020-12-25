@@ -9,9 +9,6 @@ keywords: 数据库
 > 我欲穿花寻路，直入白云深处，浩气展虹霓。
 
 
-![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java44.jpg)
-
-
 ## 范式定义
 
 百度百科:设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。
