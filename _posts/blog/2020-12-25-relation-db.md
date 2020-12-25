@@ -2,7 +2,7 @@
 layout: post
 title: 关系型数据库设计三大范式到底是什么？
 categories: 数据库
-description: 数据库
+description: 关系型数据库设计三大范式到底是什么
 keywords: 数据库
 ---
 
