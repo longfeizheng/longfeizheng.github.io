@@ -8,7 +8,7 @@ keywords: Spring
 
 > 无情不似多情苦，一寸还成千万缕。
 
-![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java45.jpg)
+![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/45.jpg)
 
 ###  前言
 
@@ -41,18 +41,18 @@ keywords: Spring
     1. `git clone https://github.com/spring-io/start.spring.io.git`
     2. `cd start.spring.io`
     3. `mvn clean install -DskipTests` 时间略长,请耐心等待，会安装`node`和`yarn`依赖
-        ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java46.png)
+        ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/46.png)
 2. 本地运行应用程序
     1. `cd start-site`
     2. `mvn spring-boot:run`
     3.  然后访问 `http://localhost:8080/`
-        ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java48.png)
+        ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/48.png)
 
 
 ### 通过`Spring Initializr`的`Web`界面
 
 要使用`Spring Initializr`，最直接的办法就是用浏览器打开`http://start.spring.io`,你应该能看到以下一个表单，由于上面我们已经在本地搭建好了`Spring Initializr`也可以直接访问`http://localhost:8080/` 查看以下表单
- ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java47.png)
+ ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/47.png)
  
  表单的左侧上方选项是，你想用`Maven`还是`Gradle`来构建项目,何种编程语言来编写代码，以及使用`Spring Boot`的哪个版本。程序默认生成`Maven`项目，并使用`Spring Boot`的最新版本(非里程碑和快照版本)，但你也可以自由选择其他选项。
  
@@ -103,15 +103,15 @@ niocoder
 
 要在`IntelliJ IDEA`里创建新的`Spring Boot`应用程序，在`File`菜单里选择`New` > `Project`。选择`customer` 输入`http://localhost:8080` 
 
- ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java48.png)
+ ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/48.png)
  
  点击`next`
  
-  ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java49.png)
+  ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/49.png)
   
   `Spring Boo`t初始化向导的第二屏要求你提供项目的一些基本信息，比如项目名称、`Maven Group`和`Artifact`、`Java`版本，以及你是想用`Maven`还是`Gradle`来构建项目。描述好项目信息之后， 点击`Next`按钮就能看到第三屏了
   
-   ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/java50.png)
+   ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/50.png)
    
    第三屏就开始问你要往项目里添加什么依赖了。和之前一样，屏幕里的复选框和`Spring Boot`起步依赖是对应的。选完之后点击`Next`就到了向导的最后一屏，点击`finish`按钮，就能在`IDE`里得到一个空的`Spring Boot`项目了。
   
