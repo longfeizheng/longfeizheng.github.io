@@ -103,15 +103,15 @@ niocoder
 
 要在`IntelliJ IDEA`里创建新的`Spring Boot`应用程序，在`File`菜单里选择`New` > `Project`。选择`customer` 输入`http://localhost:8080` 
 
- ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/48.png)
+ ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/49.png)
  
  点击`next`
  
-  ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/49.png)
+  ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/50.png)
   
   `Spring Boo`t初始化向导的第二屏要求你提供项目的一些基本信息，比如项目名称、`Maven Group`和`Artifact`、`Java`版本，以及你是想用`Maven`还是`Gradle`来构建项目。描述好项目信息之后， 点击`Next`按钮就能看到第三屏了
-  
-   ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/50.png)
+ 
+   ![](https://raw.githubusercontent.com/longfeizheng/longfeizheng.github.io/master/images/java/51.png)
    
    第三屏就开始问你要往项目里添加什么依赖了。和之前一样，屏幕里的复选框和`Spring Boot`起步依赖是对应的。选完之后点击`Next`就到了向导的最后一屏，点击`finish`按钮，就能在`IDE`里得到一个空的`Spring Boot`项目了。
   
