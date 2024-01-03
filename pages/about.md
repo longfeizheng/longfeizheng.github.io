@@ -66,9 +66,5 @@ permalink: /about/
 
 ---
 
-<audio  autoplay="autoplay">
-  <source src="http://merryyou.cn/lover/music/gu_niang.mp3" type="audio/mpeg" />
-Your browser does not support the audio element.
-</audio>
 
 <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
