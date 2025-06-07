@@ -1,9 +1,9 @@
 ---
 layout: post
 title: application.properties vs. application.yml vs. bootstrap.yml：Spring Boot 配置文件全方位对比
-categories: Spring Boot
-description: Spring Boot
-keywords: Spring Boot
+categories: SpringBoot
+description: SpringBoot
+keywords: SpringBoot
 ---
 
 在 Spring Boot 应用中，配置管理是核心功能之一。`application.properties`、`application.yml` 和 `bootstrap.yml` 是三个最关键的配置文件，它们在语法、加载时机和用途上存在显著差异。理解这些差异对于构建健壮、可配置的应用程序至关G重要。
