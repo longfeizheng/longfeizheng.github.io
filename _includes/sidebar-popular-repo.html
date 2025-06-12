@@ -1,6 +1,7 @@
 <h3>My Popular Repositories</h3>
 {% if site.github.public_repositories != null %}
 {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse%}
+{% assign filtered_repos = repos | where_exp: "item", "item.name != 'GLaDOS-checkin'" %}
 {% for repo in repos | limit: site.side_bar_repo_limit %}
 <a href="{{ repo.html_url }}" target="_blank" class="card text-center">
     <div class="thumbnail">
