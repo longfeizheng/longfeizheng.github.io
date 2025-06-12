@@ -8,7 +8,7 @@ permalink: /open-source/
 
 {% if site.github.public_repositories != null %}
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
-
+{% assign filtered_repos = sorted_repos | where_exp: "item", "item.name != 'GLaDOS-checkin'" %}
 <section class="container">
     <header class="text-center">
         <h1>Open Source Projects</h1>
@@ -17,7 +17,7 @@ permalink: /open-source/
     <div class="repo-list">
         <!-- Check here for github metadata -->
         <!-- https://help.github.com/articles/repository-metadata-on-github-pages/ -->
-        {% for repo in sorted_repos %}
+        {% for repo in filtered_repos %}
         <a href="{{ repo.html_url }}" target="_blank" class="one-third-column card text-center">
             <div class="thumbnail">
                 <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
