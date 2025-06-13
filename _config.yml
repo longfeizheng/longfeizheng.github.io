@@ -102,3 +102,20 @@ lazy_load_disqus : true
 # ---------------- #
 google:
     analytics_id: UA-97073759-1
+# Jekyll GitHub Metadata 插件的配置
+github:
+  # 尝试通过设置 repository 来明确指定要获取的仓库
+  # 这将覆盖自动检测，并可能避免尝试获取所有公共仓库
+  # 如果你的网站只显示特定仓库，可以这样做
+  # 但是，如果你仍然希望列出所有其他公共仓库，这个方法不适用
+  # repository: "longfeizheng/your-main-repo" # 替换为你的主要仓库名，这样它可能就只获取这一个
+
+  # 更直接的排除选项通常不存在，但我们可以尝试
+  # 注意：以下参数并非官方明确支持的排除选项，可能无效
+  # 它们只是基于其他类似插件的推测
+  exclude_repos:
+    - "GLaDOS-checkin"
+  exclude_repository_names:
+    - "GLaDOS-checkin"
+  skip_repos:
+    - "GLaDOS-checkin"
