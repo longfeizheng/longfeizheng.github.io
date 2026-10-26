@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://niocoder.com/
+url: https://niocoder.com
 date_format: "ordinal"
 title: 我的技术知识分享
 subtitle: "人生如逆旅,我亦是行人"
@@ -42,6 +42,10 @@ navs:
   -
     href: /links/
     label: 链接
+
+  -
+    href: https://itupload.cn
+    label: 工具箱
 
   -
     href: /open-source/
