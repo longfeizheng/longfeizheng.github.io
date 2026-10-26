@@ -8,7 +8,7 @@ layout: default
       <div class="collection-title">
         <h1 class="collection-header">{{ page.title }}</h1>
         <div class="collection-info">
-          <span class="meta-info">开源改变世界 — 我的 GitHub 公开仓库一览。</span>
+          <span class="meta-info">开源改变世界 — 我的 GitHub 开源项目精选，完整列表见 <a href="https://github.com/longfeizheng" target="_blank">GitHub 主页</a>。</span>
         </div>
       </div>
     </div>
@@ -19,42 +19,128 @@ layout: default
 <section class="container content">
 <div class="columns">
   <div class="column three-fourths" >
-    {% if site.github.public_repositories %}
-    {% for repo in site.github.public_repositories %}
-    {% if repo.name != 'GLaDOS-checkin' %}
-    <a href="{{ repo.html_url }}" target="_blank" class="card text-center">
+
+    <a href="https://github.com/longfeizheng/blockchain-java" target="_blank" class="card text-center">
         <div class="thumbnail">
-            <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
+            <div class="card-image geopattern" data-pattern-id="blockchain-java">
                 <div class="card-image-cell">
-                    <h3 class="card-title">
-                        {{ repo.name }}
-                    </h3>
+                    <h3 class="card-title">blockchain-java</h3>
                 </div>
             </div>
             <div class="caption">
                 <div class="card-description">
-                    <p class="card-text">{{ repo.description }}</p>
+                    <p class="card-text">🎉 Java 简单实现区块链，配套博客《用 Java 创建你的第一个区块链》系列</p>
                 </div>
                 <div class="card-text">
-                    <span class="meta-info" title="{{ repo.stargazers_count }} stars">
-                        <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
-                    </span>
-                    <span class="meta-info" title="{{ repo.forks_count }} forks">
-                        <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
-                    </span>
-                    <span class="meta-info" title="Last updated：{{ repo.updated_at }}">
-                        <span class="octicon octicon-clock"></span>
-                        <time datetime="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
-                    </span>
+                    <span class="meta-info" title="460 stars"><span class="octicon octicon-star"></span> 460</span>
+                    <span class="meta-info" title="185 forks"><span class="octicon octicon-git-branch"></span> 185</span>
+                    <span class="meta-info" title="Last updated：2022-05-20"><span class="octicon octicon-clock"></span> 2022-05-20</span>
                 </div>
             </div>
         </div>
     </a>
-    {% endif %}
-    {% endfor %}
-    {% else %}
-    <p>仓库列表暂时加载不出来，可以直接到我的 <a href="https://github.com/longfeizheng" target="_blank">GitHub 主页</a> 查看。</p>
-    {% endif %}
+
+    <a href="https://github.com/longfeizheng/jpa-example" target="_blank" class="card text-center">
+        <div class="thumbnail">
+            <div class="card-image geopattern" data-pattern-id="jpa-example">
+                <div class="card-image-cell">
+                    <h3 class="card-title">jpa-example</h3>
+                </div>
+            </div>
+            <div class="caption">
+                <div class="card-description">
+                    <p class="card-text">🎉 JPA demo，Spring Data JPA 关系映射系列文章的配套代码</p>
+                </div>
+                <div class="card-text">
+                    <span class="meta-info" title="68 stars"><span class="octicon octicon-star"></span> 68</span>
+                    <span class="meta-info" title="66 forks"><span class="octicon octicon-git-branch"></span> 66</span>
+                    <span class="meta-info" title="Last updated：2019-03-07"><span class="octicon octicon-clock"></span> 2019-03-07</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://github.com/longfeizheng/editor-markdown" target="_blank" class="card text-center">
+        <div class="thumbnail">
+            <div class="card-image geopattern" data-pattern-id="editor-markdown">
+                <div class="card-image-cell">
+                    <h3 class="card-title">editor-markdown</h3>
+                </div>
+            </div>
+            <div class="caption">
+                <div class="card-description">
+                    <p class="card-text">Spring Boot 使用 Editor.md 实现 Markdown 富文本编辑器</p>
+                </div>
+                <div class="card-text">
+                    <span class="meta-info" title="36 stars"><span class="octicon octicon-star"></span> 36</span>
+                    <span class="meta-info" title="27 forks"><span class="octicon octicon-git-branch"></span> 27</span>
+                    <span class="meta-info" title="Last updated：2018-03-16"><span class="octicon octicon-clock"></span> 2018-03-16</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://github.com/longfeizheng/docker-compose-boot-nginx" target="_blank" class="card text-center">
+        <div class="thumbnail">
+            <div class="card-image geopattern" data-pattern-id="docker-compose-boot-nginx">
+                <div class="card-image-cell">
+                    <h3 class="card-title">docker-compose-boot-nginx</h3>
+                </div>
+            </div>
+            <div class="caption">
+                <div class="card-description">
+                    <p class="card-text">Docker Compose + Nginx 实现 Spring Boot 负载均衡部署示例</p>
+                </div>
+                <div class="card-text">
+                    <span class="meta-info" title="12 stars"><span class="octicon octicon-star"></span> 12</span>
+                    <span class="meta-info" title="7 forks"><span class="octicon octicon-git-branch"></span> 7</span>
+                    <span class="meta-info" title="Last updated：2018-04-01"><span class="octicon octicon-clock"></span> 2018-04-01</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://github.com/longfeizheng/data-structure-java" target="_blank" class="card text-center">
+        <div class="thumbnail">
+            <div class="card-image geopattern" data-pattern-id="data-structure-java">
+                <div class="card-image-cell">
+                    <h3 class="card-title">data-structure-java</h3>
+                </div>
+            </div>
+            <div class="caption">
+                <div class="card-description">
+                    <p class="card-text">Java 实现的常用数据结构</p>
+                </div>
+                <div class="card-text">
+                    <span class="meta-info" title="11 stars"><span class="octicon octicon-star"></span> 11</span>
+                    <span class="meta-info" title="9 forks"><span class="octicon octicon-git-branch"></span> 9</span>
+                    <span class="meta-info" title="Last updated：2022-06-17"><span class="octicon octicon-clock"></span> 2022-06-17</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="https://github.com/longfeizheng/animated-banner" target="_blank" class="card text-center">
+        <div class="thumbnail">
+            <div class="card-image geopattern" data-pattern-id="animated-banner">
+                <div class="card-image-cell">
+                    <h3 class="card-title">animated-banner</h3>
+                </div>
+            </div>
+            <div class="caption">
+                <div class="card-description">
+                    <p class="card-text">Spring Boot 2 动画 Banner（animated gif）</p>
+                </div>
+                <div class="card-text">
+                    <span class="meta-info" title="9 stars"><span class="octicon octicon-star"></span> 9</span>
+                    <span class="meta-info" title="4 forks"><span class="octicon octicon-git-branch"></span> 4</span>
+                    <span class="meta-info" title="Last updated：2018-03-02"><span class="octicon octicon-clock"></span> 2018-03-02</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <p>更多仓库（包括本博客源码 longfeizheng.github.io）见我的 <a href="https://github.com/longfeizheng?tab=repositories" target="_blank">GitHub 仓库列表</a>。</p>
   </div>
   <div class="column one-fourth">
     {% include sidebar-search.html %}
