@@ -8,7 +8,7 @@ layout: default
       <div class="collection-title">
         <h1 class="collection-header">{{ page.title }}</h1>
         <div class="collection-info">
-          <span class="meta-info">开源改变世界 — 我的 GitHub 公开仓库一览，按 Star 数排序。</span>
+          <span class="meta-info">开源改变世界 — 我的 GitHub 公开仓库一览。</span>
         </div>
       </div>
     </div>
@@ -19,10 +19,9 @@ layout: default
 <section class="container content">
 <div class="columns">
   <div class="column three-fourths" >
-    {% if site.github.public_repositories != null %}
-    {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
-    {% assign filtered_repos = repos | where_exp: "item", "item.name != 'GLaDOS-checkin'" %}
-    {% for repo in filtered_repos %}
+    {% if site.github.public_repositories %}
+    {% for repo in site.github.public_repositories %}
+    {% if repo.name != 'GLaDOS-checkin' %}
     <a href="{{ repo.html_url }}" target="_blank" class="card text-center">
         <div class="thumbnail">
             <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
@@ -51,6 +50,7 @@ layout: default
             </div>
         </div>
     </a>
+    {% endif %}
     {% endfor %}
     {% else %}
     <p>仓库列表暂时加载不出来，可以直接到我的 <a href="https://github.com/longfeizheng" target="_blank">GitHub 主页</a> 查看。</p>
